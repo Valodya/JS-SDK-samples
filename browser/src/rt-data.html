@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Backendless JS-SDK Example</title>
+</head>
+<script src="backendless.js"></script>
+<script src="config.js"></script>
+<script src="init.js"></script>
+<body>
+<ul>
+  <li><a href="./rt-data.html">RT-Data</a>
+</ul>
+
+<div style="padding: 20px">
+  <h2>RealTime Database</h2>
+
+  <h4>Log Messages:</h4>
+
+  <div class="log-messages"></div>
+</div>
+
+<script>
+  const personsData = Backendless.Data.of('Persons');
+  const rtHandlers = personsData.rt();
+
+  const $logMessages = document.querySelector('.log-messages');
+
+  const log = (...messages) => {
+    console.log(...messages);
+
+    const $logMessage = document.createElement('div');
+    $logMessage.innerText = messages.join(' ');
+
+    $logMessages.append($logMessage);
+  };
+
+  Backendless.RT.addConnectErrorEventListener((...args) => {
+    log('Connect_Error_RT_Event:', JSON.stringify(args))
+  });
+
+  Backendless.RT.addConnectEventListener((...args) => {
+    log('Connect_RT_Event:', JSON.stringify(args))
+  });
+
+  Backendless.RT.addDisconnectEventListener((...args) => {
+    log('Disconnect_RT_Event:', JSON.stringify(args))
+  });
+
+  Backendless.RT.addReconnectAttemptEventListener((...args) => {
+    log('Reconnect_Attempt_RT_Event:', JSON.stringify(args))
+  });
+
+  rtHandlers.addCreateListener((object) => {
+    log('RT_Event:CREATE', JSON.stringify(object));
+  });
+
+  rtHandlers.addUpdateListener((object) => {
+    log('RT_Event:UPDATE', JSON.stringify(object));
+  });
+
+  rtHandlers.addDeleteListener((object) => {
+    log('RT_Event:DELETE', JSON.stringify(object));
+  });
+
+  setTimeout(async () => {
+    const savedObject = await personsData.save({ name: 'Bob' });
+
+    log('savedObject:', JSON.stringify(savedObject));
+
+    const updatedObject = await personsData.save({ ...savedObject, name: 'Nick' });
+
+    log('updatedObject:', JSON.stringify(updatedObject));
+
+    await personsData.remove(updatedObject);
+
+    log('deleteObject:', JSON.stringify(updatedObject));
+  }, 5000);
+
+</script>
+</body>
+</html>
