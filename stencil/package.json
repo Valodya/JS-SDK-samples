@@ -1,0 +1,22 @@
+{
+  "name": "stencil",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "stencil build",
+    "start": "stencil build --dev --watch --serve --debug",
+    "generate": "stencil generate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@stencil/core": "^1.12.2",
+    "@stencil/router": "^1.0.1"
+  },
+  "dependencies": {
+    "backendless": "^5.8.9",
+    "prettier": "^2.0.4"
+  }
+}
