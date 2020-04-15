@@ -1,6 +1,7 @@
 .DS_Store
 .idea/*
 !.idea/codeStyleSettings.xml
+!.idea/modules.xml
 **/.idea/*
 **/!.idea/codeStyleSettings.xml
 *.log
