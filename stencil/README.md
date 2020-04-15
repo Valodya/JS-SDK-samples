@@ -1,5 +1,5 @@
 # JS-SDK-samples/Stencil
-Sample projects to demonstrate how to use [Backendless JS-SDK](https://github.com/Backendless/JS-SDK) with [Stencil](https://stenciljs.com/)
+Sample project to demonstrate how to use [Backendless JS-SDK](https://github.com/Backendless/JS-SDK) with [Stencil](https://stenciljs.com/)
 
 ####Installing:
 ````

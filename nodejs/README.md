@@ -1,5 +1,5 @@
 # JS-SDK-samples/NodeJS
-Sample projects to demonstrate how to use Backendless JS-SDK with Nodejs
+Sample project to demonstrate how to use Backendless JS-SDK with Nodejs
 
 ###RT-Data
 It demonstrates how to use simple RealTime Collection 
