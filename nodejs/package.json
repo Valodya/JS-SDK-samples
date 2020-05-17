@@ -1,5 +1,5 @@
 {
-  "name": "nodejs",
+  "name": "@js-sdk-samples/nodejs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
