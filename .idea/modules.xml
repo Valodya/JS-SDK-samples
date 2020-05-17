@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/browser/browser.iml" filepath="$PROJECT_DIR$/browser/browser.iml" />
       <module fileurl="file://$PROJECT_DIR$/nodejs/nodejs.iml" filepath="$PROJECT_DIR$/nodejs/nodejs.iml" />
       <module fileurl="file://$PROJECT_DIR$/stencil/stencil.iml" filepath="$PROJECT_DIR$/stencil/stencil.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webpack/webpack.iml" filepath="$PROJECT_DIR$/webpack/webpack.iml" />
     </modules>
   </component>
 </project>
