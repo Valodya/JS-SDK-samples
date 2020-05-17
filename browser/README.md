@@ -1,17 +1,17 @@
 # JS-SDK-samples/Browser
 Sample project to demonstrate how to use [Backendless JS-SDK](https://github.com/Backendless/JS-SDK) in simple Browser
 
-####Installing:
+#### Installing:
 ````
 npm i
 ````
 
-####Running:
+#### Running:
 ````
 npm start
 ````
 
-###RT-Data
+### RT-Data
 It demonstrates how to use simple [RealTime Database](https://backendless.com/docs/js/rt_overview.html) 
 
 

@@ -1,14 +1,14 @@
 # JS-SDK-samples/NodeJS
 Sample project to demonstrate how to use Backendless JS-SDK with Nodejs
 
-###RT-Data
+### RT-Data
 It demonstrates how to use simple RealTime Collection 
 
-#####Running:
+##### Running:
 
 `node ./src/rt-data.js`
 
-#####Output:
+##### Output:
 
 ````bash
 Valodyas-MBP-2:nodejs valodyaupirov$ node ./src/rt-data.js 
