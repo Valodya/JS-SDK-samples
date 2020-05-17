@@ -1,0 +1,18 @@
+<h2>RT Persons:</h2>
+
+<div>
+  <label>Person name:
+    <input #personName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(personName.value); personName.value=''">
+    add
+  </button>
+</div>
+
+<ul class="persons-list">
+  <li *ngFor="let person of persons">
+    <span>{{person.name}}</span>
+    <button class="delete" title="delete person" (click)="delete(person)">x</button>
+  </li>
+</ul>
